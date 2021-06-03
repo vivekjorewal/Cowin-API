@@ -7,9 +7,10 @@ base_cowin_url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/f
 now = datetime.now()
 today_date = now.strftime("%d-%m-%Y")
 group_id = 'vaccine_slots_dausa'
-flag=0
+
 
 def fetch_data_from_cowin(district_id):
+    flag=0
     query_params = "?district_id={}&date={}".format(district_id, today_date)
     final_url = base_cowin_url+query_params
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
@@ -40,3 +41,4 @@ if __name__ == "__main__":
 
 while flag == 0:
     time.sleep(30)
+    fetch_data_from_cowin(511)
