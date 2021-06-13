@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 import time
 
-api_url_telegram = 'https://api.telegram.org/bot1893478835:AAGES0-UlsOEtDRrBHlEPMA9U5H4RNIgC2Y/sendMessage?chat_id=@__groupid__&text='
+api_url_telegram = 'https://api.telegram.org/bot(write token no. of your bot here)/sendMessage?chat_id=@__groupid__&text='
 base_cowin_url = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict'
 now = datetime.now()
 today_date = now.strftime("%d-%m-%Y")
